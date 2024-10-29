@@ -25,7 +25,7 @@ class MongooseService {
     }
 
     connectWithRetry = async () => {
-        log('Intentando conectar con MongoDB (se reintentará de ser necesario)');
+        console.log('Intentando conectar con MongoDB (se reintentará de ser necesario)');
       
         mongoose
             .connect(this.url, this.mongooseOptions)
