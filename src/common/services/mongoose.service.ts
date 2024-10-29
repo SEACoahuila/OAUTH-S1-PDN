@@ -17,6 +17,7 @@ class MongooseService {
     };
 
     constructor() {
+        mongoose.set('debug', true);
         this.connectWithRetry();
     }
 
