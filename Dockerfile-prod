@@ -2,14 +2,16 @@ FROM node:18-alpine
 
 WORKDIR /home/node
 
-COPY package.json .
+# Copia las dependencias y realiza la instalación primero
+COPY package.json . 
 COPY yarn.lock .
-COPY tsconfig.json .
 
+# Instala las dependencias antes de copiar el código
 RUN yarn install
 
-COPY src ./src
+# Luego copia el código fuente
+COPY . .
 
 EXPOSE 3000
 
-CMD [ "yarn","start" ]
+CMD [ "yarn", "start" ]
