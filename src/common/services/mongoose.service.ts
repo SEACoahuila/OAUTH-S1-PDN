@@ -30,7 +30,7 @@ class MongooseService {
         mongoose
             .connect(this.url, this.mongooseOptions)
             .then(() => {
-                log('conectado a MongoDB');
+                console.log('conectado a MongoDB');
             })
             .catch((err) => {
                 console.log(this.url);
