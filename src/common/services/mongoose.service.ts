@@ -7,8 +7,8 @@ const log: debug.IDebugger = debug('app:mongoose-service');
 
 class MongooseService {
     private count = 0;
-    // private url = `mongodb://${user}:${pass}@${host}:${port}/${database}?authMechanism=DEFAULT&authSource=${authSource}`;
-    private url = `mongodb+srv://${user}:${pass}@${host}/${database}`
+    private url = `mongodb://${user}:${pass}@${host}:${port}/${database}?authMechanism=DEFAULT&authSource=${authSource}`;
+    // private url = `mongodb+srv://${user}:${pass}@${host}/${database}`
     private mongooseOptions = {
         useNewUrlParser: true,
         useUnifiedTopology: true,
