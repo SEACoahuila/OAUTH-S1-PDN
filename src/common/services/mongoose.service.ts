@@ -34,8 +34,8 @@ class MongooseService {
             })
             .catch((err) => {
                 const retrySeconds = 5;
-                console.log("url")
-                console.log(this.url)
+                
+                console.log(`Error: ${err}`)
                 console.log(`Conexión a MongoDB no satisfactoria (reintento #${++this.count} despues ${retrySeconds} segundos):`, err);
                 setTimeout(this.connectWithRetry, retrySeconds * 1000);
             });
